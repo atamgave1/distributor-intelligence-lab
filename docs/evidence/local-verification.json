@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "completed_at": "2026-10-30T09:06:28.168825+00:00",
+  "environment": "Python 3.13.3 / Darwin arm64",
+  "tests_run": 47,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "frontend": {
+    "status": "passed",
+    "output": "PASS: year/segment/region/category filters; signed returns; weighted margin; return-credit denominator; empty results; all aging boundaries.\n"
+  },
+  "elapsed_seconds": 1.906,
+  "dataset": {
+    "annual": {
+      "2024": {
+        "cogs_cents": 3447559358,
+        "net_revenue_cents": 5187695503
+      },
+      "2025": {
+        "cogs_cents": 3789123682,
+        "net_revenue_cents": 5556077681
+      }
+    },
+    "as_of": "2025-12-31",
+    "cogs_cents": 7236683040,
+    "counts": {
+      "order_lines": 9956,
+      "orders": 5004,
+      "payments": 4691,
+      "returns": 753
+    },
+    "credit_cents": 148833035,
+    "data_version": "1.0.0",
+    "invoice_amount_cents": 10892606219,
+    "net_revenue_cents": 10743773184,
+    "outstanding_cents": 843203217,
+    "paid_cents": 9900569967,
+    "source": "100% synthetic"
+  },
+  "scope": "Local deterministic demonstration and statistical baseline; not a live LLM or cloud deployment",
+  "deferred": [
+    "Live LLM integration and provider evaluation",
+    "Airbyte/Airflow/dbt/Superset runtime integrations",
+    "AWS Athena/QuickSight deployment"
+  ]
+}

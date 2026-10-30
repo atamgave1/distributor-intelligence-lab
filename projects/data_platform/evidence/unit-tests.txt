@@ -1,0 +1,23 @@
+test_clock_skew_boundary_is_explicit_and_inclusive (test_pipeline.PipelineTests.test_clock_skew_boundary_is_explicit_and_inclusive) ... ok
+test_duplicate_source_batch_is_rejected (test_pipeline.PipelineTests.test_duplicate_source_batch_is_rejected) ... ok
+test_empty_full_refresh_clears_marts_and_cursor (test_pipeline.PipelineTests.test_empty_full_refresh_clears_marts_and_cursor) ... ok
+test_failure_after_raw_rolls_back_raw_publish_and_cursor (test_pipeline.PipelineTests.test_failure_after_raw_rolls_back_raw_publish_and_cursor) ... ok
+test_failure_before_commit_keeps_last_good_marts (test_pipeline.PipelineTests.test_failure_before_commit_keeps_last_good_marts) ... ok
+test_full_refresh_recovers_updates_outside_overlap (test_pipeline.PipelineTests.test_full_refresh_recovers_updates_outside_overlap) ... ok
+test_full_refresh_resets_cursor_for_replaced_source (test_pipeline.PipelineTests.test_full_refresh_resets_cursor_for_replaced_source) ... ok
+test_future_timestamp_batch_cannot_poison_cursor_or_publication (test_pipeline.PipelineTests.test_future_timestamp_batch_cannot_poison_cursor_or_publication) ... ok
+test_initial_load_and_independent_totals (test_pipeline.PipelineTests.test_initial_load_and_independent_totals) ... ok
+test_invalid_calendar_date_and_fractional_money_rejected (test_pipeline.PipelineTests.test_invalid_calendar_date_and_fractional_money_rejected) ... ok
+test_overlap_captures_late_event_and_update (test_pipeline.PipelineTests.test_overlap_captures_late_event_and_update) ... ok
+test_quality_failure_does_not_publish (test_pipeline.PipelineTests.test_quality_failure_does_not_publish) ... ok
+test_rerun_is_idempotent (test_pipeline.PipelineTests.test_rerun_is_idempotent) ... ok
+test_return_is_signed_and_reconciles (test_pipeline.PipelineTests.test_return_is_signed_and_reconciles) ... ok
+test_snapshot_adapter (test_pipeline.PipelineTests.test_snapshot_adapter) ... ok
+test_soft_delete_removes_published_fact_but_keeps_tombstone (test_pipeline.PipelineTests.test_soft_delete_removes_published_fact_but_keeps_tombstone) ... ok
+test_source_raw_warehouse_must_be_distinct (test_pipeline.PipelineTests.test_source_raw_warehouse_must_be_distinct) ... ok
+test_stale_overlap_record_cannot_overwrite_newer_raw (test_pipeline.PipelineTests.test_stale_overlap_record_cannot_overwrite_newer_raw) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.136s
+
+OK

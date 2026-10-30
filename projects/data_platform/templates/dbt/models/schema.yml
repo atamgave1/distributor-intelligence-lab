@@ -1,0 +1,21 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: sales_events
+models:
+  - name: stg_sales_events
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: event_date
+        tests: [not_null]
+      - name: kind
+        tests:
+          - accepted_values:
+              values: [sale, return]
+  - name: daily_sales
+    columns:
+      - name: event_date
+        tests: [unique, not_null]

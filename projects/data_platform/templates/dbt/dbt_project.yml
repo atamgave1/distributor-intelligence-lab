@@ -1,0 +1,8 @@
+name: distributor_portfolio
+version: '1.0.0'
+config-version: 2
+profile: distributor_portfolio
+model-paths: [models]
+models:
+  distributor_portfolio:
+    +materialized: table

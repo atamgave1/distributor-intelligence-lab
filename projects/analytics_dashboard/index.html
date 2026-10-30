@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Northstar — Revenue intelligence</title>
+  <link rel="stylesheet" href="/dashboard/styles.css">
+</head>
+<body>
+<aside class="rail">
+  <a class="brand" href="/" aria-label="Portfolio home"><span class="brand-mark">N</span><span>northstar<span class="brand-sub">DISTRIBUTION INTELLIGENCE</span></span></a>
+  <div class="workspace-label">WORKSPACE</div>
+  <nav aria-label="Dashboard sections">
+    <a href="#overview" class="nav-active"><span aria-hidden="true">◫</span> Performance overview</a>
+    <a href="#contributions"><span aria-hidden="true">◈</span> Revenue drivers</a>
+    <a href="#working-capital"><span aria-hidden="true">▤</span> Working capital</a>
+    <a href="#definitions"><span aria-hidden="true">ⓘ</span> Metric definitions</a>
+  </nav>
+  <div class="rail-footer"><span class="status-dot"></span> Local analytics environment<p>Synthetic business data<br>No client information</p><a href="/">← Back to portfolio lab</a></div>
+</aside>
+<main>
+  <header class="topbar"><div><span class="breadcrumb">WORKSPACE /</span> Executive analytics</div><span class="demo-badge"><span></span> SYNTHETIC DEMONSTRATION</span></header>
+  <section id="overview" class="heading-row"><div><p class="eyebrow">THE BUSINESS, IN FOCUS</p><h1>Performance overview</h1><p class="subtitle">Revenue quality. Profitability. Cash tied up in the business.</p></div><div class="snapshot"><span class="status-dot"></span><div>Snapshot date<strong>31 December 2025</strong></div></div></section>
+  <div class="environment-note"><span aria-hidden="true">ⓘ</span><span><strong>Local prototype.</strong> AWS deployment pending. These charts are generated locally; they are not QuickSight screenshots.</span></div>
+  <section class="filterbar" aria-label="Dashboard filters">
+    <label>Sales period<select id="year" aria-label="Sales period"><option value="">All years</option></select></label>
+    <label>Customer segment<select id="segment" aria-label="Customer segment"><option value="">All segments</option></select></label>
+    <label>Region<select id="region" aria-label="Region"><option value="">All regions</option></select></label>
+    <label>Product category<select id="category" aria-label="Product category"><option value="">All categories</option></select></label>
+    <button id="reset" type="button">Reset filters <span aria-hidden="true">↺</span></button>
+  </section>
+  <p class="scope-note">Sales period filters trading activity. Receivables and inventory remain snapshots at the stated date. <a href="#definitions">View filter scope</a></p>
+  <div id="loading" role="status" class="loading">Loading the reporting model…</div>
+  <div id="error" role="alert" hidden></div>
+  <div id="content" hidden>
+    <section class="metrics-grid" aria-label="Key performance indicators">
+      <article class="metric"><div class="metric-label">NET REVENUE <span aria-hidden="true">↗</span></div><div class="metric-value" id="revenue">—</div><div class="metric-foot" id="revenue-detail">After return credits · excludes tax</div></article>
+      <article class="metric"><div class="metric-label">GROSS PROFIT <span aria-hidden="true">◈</span></div><div class="metric-value" id="profit">—</div><div class="metric-foot">Net revenue less signed cost of goods</div></article>
+      <article class="metric"><div class="metric-label">GROSS MARGIN <span aria-hidden="true">◔</span></div><div class="metric-value" id="margin">—</div><div class="metric-foot">Weighted across the selected sales</div></article>
+      <article class="metric"><div class="metric-label">RETURN CREDIT RATE <span aria-hidden="true">↶</span></div><div class="metric-value" id="returns">—</div><div class="metric-foot" id="return-detail">Credit value / positive sales value</div></article>
+    </section>
+    <section class="panel trend-panel"><div class="panel-header"><div><h2>Revenue & gross profit</h2><p>Monthly trading performance · USD</p></div><div class="legend"><span><i class="revenue-swatch"></i>Net revenue</span><span><i class="profit-swatch"></i>Gross profit</span></div></div><div id="trend" class="trend-chart"></div><details class="chart-data"><summary>View monthly values</summary><div class="table-scroll"><table><thead><tr><th>Month</th><th>Net revenue</th><th>Gross profit</th><th>Margin</th></tr></thead><tbody id="monthly-table"></tbody></table></div></details></section>
+    <section id="contributions" class="two-col">
+      <article class="panel"><div class="panel-header"><div><h2>Category contribution</h2><p>Where revenue is generated</p></div><span class="panel-tag">NET REVENUE</span></div><div id="categories" class="horizontal-chart"></div></article>
+      <article class="panel"><div class="panel-header"><div><h2>Top customers</h2><p>Leading accounts by net revenue</p></div><span class="panel-tag">TOP 5</span></div><div id="customers" class="horizontal-chart"></div></article>
+    </section>
+    <section id="working-capital" class="section-heading"><div><p class="eyebrow">WORKING CAPITAL</p><h2>Cash, collections & inventory</h2></div><span class="date-chip">AS OF 31 DEC 2025</span></section>
+    <section class="capital-grid">
+      <article class="panel aging-panel"><div class="panel-header"><div><h2>Receivables aging</h2><p>Open balances after credits and payments</p></div></div><div class="capital-headline"><strong id="ar-total">—</strong><span>total outstanding</span></div><div id="aging" class="aging-chart"></div><div class="aging-total"><span><i class="status-dot amber"></i>Overdue balance</span><strong id="overdue-total">—</strong></div></article>
+      <article class="panel inventory-panel"><div class="panel-header"><div><h2>Inventory exposure</h2><p>Latest snapshot · valued at product cost</p></div></div><div class="capital-headline"><strong id="stock-total">—</strong><span>on-hand inventory value</span></div><div class="inventory-summary"><div><span id="low-stock">—</span><p>products at or below<br>reorder point</p></div><div><span id="product-count">—</span><p>products in<br>selected categories</p></div></div><p class="inventory-note">Inventory follows the category filter. Customer region and segment do not apply to warehouse stock.</p></article>
+    </section>
+    <section class="panel"><div class="panel-header"><div><h2>Collections watchlist</h2><p>Largest overdue balances · top 8 open invoices</p></div></div><div class="table-scroll"><table><thead><tr><th>Customer / invoice</th><th>Region</th><th>Due date</th><th>Days overdue</th><th>Outstanding</th></tr></thead><tbody id="watchlist"></tbody></table></div><p id="watchlist-scope" class="table-note"></p></section>
+    <section id="definitions" class="panel definitions"><div class="panel-header"><div><h2>Know what the numbers mean</h2><p>Explicit definitions. Reproducible calculations.</p></div></div><div id="definition-list"></div></section>
+    <footer>Northstar is a fictional distributor. All records are generated synthetic data.<span>Portfolio demonstration · Local execution</span></footer>
+  </div>
+</main>
+<script src="/dashboard/app.js" defer></script>
+</body>
+</html>

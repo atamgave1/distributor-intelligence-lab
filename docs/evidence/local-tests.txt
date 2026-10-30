@@ -1,0 +1,52 @@
+test_csv_exports_include_checksums (tests.test_shared.SharedDataTests.test_csv_exports_include_checksums) ... ok
+test_generation_is_reproducible (tests.test_shared.SharedDataTests.test_generation_is_reproducible) ... ok
+test_ledger_reconciles_to_generator_reference (tests.test_shared.SharedDataTests.test_ledger_reconciles_to_generator_reference) ... ok
+test_read_only_connection_rejects_writes (tests.test_shared.SharedDataTests.test_read_only_connection_rejects_writes) ... ok
+test_receivables_reconcile_without_join_multiplication (tests.test_shared.SharedDataTests.test_receivables_reconcile_without_join_multiplication) ... ok
+test_valid_relationships_and_return_limits (tests.test_shared.SharedDataTests.test_valid_relationships_and_return_limits) ... ok
+test_empty_and_zero_revenue_are_not_hallucinated (projects.ai_analytics.test_engine.AnalyticsTests.test_empty_and_zero_revenue_are_not_hallucinated) ... ok
+test_exact_parent_ui_examples (projects.ai_analytics.test_engine.AnalyticsTests.test_exact_parent_ui_examples) ... ok
+test_forecast_independent_holdout_metrics (projects.ai_analytics.test_engine.AnalyticsTests.test_forecast_independent_holdout_metrics) ... ok
+test_forecast_requires_complete_months (projects.ai_analytics.test_engine.AnalyticsTests.test_forecast_requires_complete_months) ... ok
+test_gold_question_suite_35_supported_prompts (projects.ai_analytics.test_engine.AnalyticsTests.test_gold_question_suite_35_supported_prompts) ... ok
+test_holdout_changes_do_not_change_predictions (projects.ai_analytics.test_engine.AnalyticsTests.test_holdout_changes_do_not_change_predictions) ... ok
+test_missing_database_is_not_created (projects.ai_analytics.test_engine.AnalyticsTests.test_missing_database_is_not_created) ... ok
+test_receivables_scope_is_not_silently_changed (projects.ai_analytics.test_engine.AnalyticsTests.test_receivables_scope_is_not_silently_changed) ... ok
+test_rejects_injection_unknown_filters_and_unsupported_metrics (projects.ai_analytics.test_engine.AnalyticsTests.test_rejects_injection_unknown_filters_and_unsupported_metrics) ... ok
+test_semantic_metric_ranking_and_forecast_guards (projects.ai_analytics.test_engine.AnalyticsTests.test_semantic_metric_ranking_and_forecast_guards) ... ok
+test_untrusted_dataset_text_is_not_an_instruction (projects.ai_analytics.test_engine.AnalyticsTests.test_untrusted_dataset_text_is_not_an_instruction) ... ok
+test_clock_skew_boundary_is_explicit_and_inclusive (projects.data_platform.tests.test_pipeline.PipelineTests.test_clock_skew_boundary_is_explicit_and_inclusive) ... ok
+test_duplicate_source_batch_is_rejected (projects.data_platform.tests.test_pipeline.PipelineTests.test_duplicate_source_batch_is_rejected) ... ok
+test_empty_full_refresh_clears_marts_and_cursor (projects.data_platform.tests.test_pipeline.PipelineTests.test_empty_full_refresh_clears_marts_and_cursor) ... ok
+test_failure_after_raw_rolls_back_raw_publish_and_cursor (projects.data_platform.tests.test_pipeline.PipelineTests.test_failure_after_raw_rolls_back_raw_publish_and_cursor) ... ok
+test_failure_before_commit_keeps_last_good_marts (projects.data_platform.tests.test_pipeline.PipelineTests.test_failure_before_commit_keeps_last_good_marts) ... ok
+test_full_refresh_recovers_updates_outside_overlap (projects.data_platform.tests.test_pipeline.PipelineTests.test_full_refresh_recovers_updates_outside_overlap) ... ok
+test_full_refresh_resets_cursor_for_replaced_source (projects.data_platform.tests.test_pipeline.PipelineTests.test_full_refresh_resets_cursor_for_replaced_source) ... ok
+test_future_timestamp_batch_cannot_poison_cursor_or_publication (projects.data_platform.tests.test_pipeline.PipelineTests.test_future_timestamp_batch_cannot_poison_cursor_or_publication) ... ok
+test_initial_load_and_independent_totals (projects.data_platform.tests.test_pipeline.PipelineTests.test_initial_load_and_independent_totals) ... ok
+test_invalid_calendar_date_and_fractional_money_rejected (projects.data_platform.tests.test_pipeline.PipelineTests.test_invalid_calendar_date_and_fractional_money_rejected) ... ok
+test_overlap_captures_late_event_and_update (projects.data_platform.tests.test_pipeline.PipelineTests.test_overlap_captures_late_event_and_update) ... ok
+test_quality_failure_does_not_publish (projects.data_platform.tests.test_pipeline.PipelineTests.test_quality_failure_does_not_publish) ... ok
+test_rerun_is_idempotent (projects.data_platform.tests.test_pipeline.PipelineTests.test_rerun_is_idempotent) ... ok
+test_return_is_signed_and_reconciles (projects.data_platform.tests.test_pipeline.PipelineTests.test_return_is_signed_and_reconciles) ... ok
+test_snapshot_adapter (projects.data_platform.tests.test_pipeline.PipelineTests.test_snapshot_adapter) ... ok
+test_soft_delete_removes_published_fact_but_keeps_tombstone (projects.data_platform.tests.test_pipeline.PipelineTests.test_soft_delete_removes_published_fact_but_keeps_tombstone) ... ok
+test_source_raw_warehouse_must_be_distinct (projects.data_platform.tests.test_pipeline.PipelineTests.test_source_raw_warehouse_must_be_distinct) ... ok
+test_stale_overlap_record_cannot_overwrite_newer_raw (projects.data_platform.tests.test_pipeline.PipelineTests.test_stale_overlap_record_cannot_overwrite_newer_raw) ... ok
+test_aging_all_boundaries (projects.analytics_dashboard.test_metrics.MetricsTest.test_aging_all_boundaries) ... ok
+test_inventory_snapshot_cutoff_and_cost (projects.analytics_dashboard.test_metrics.MetricsTest.test_inventory_snapshot_cutoff_and_cost) ... ok
+test_receivables_partial_payment_and_aging_boundaries (projects.analytics_dashboard.test_metrics.MetricsTest.test_receivables_partial_payment_and_aging_boundaries) ... ok
+test_signed_revenue_and_weighted_margin (projects.analytics_dashboard.test_metrics.MetricsTest.test_signed_revenue_and_weighted_margin) ... ok
+test_zero_denominator_and_empty_result (projects.analytics_dashboard.test_metrics.MetricsTest.test_zero_denominator_and_empty_result) ... ok
+test_assistant_round_trip (tests.test_integration.HTTPTests.test_assistant_round_trip) ... ok
+test_cross_origin_rejected (tests.test_integration.HTTPTests.test_cross_origin_rejected) ... ok
+test_dashboard_json (tests.test_integration.HTTPTests.test_dashboard_json) ... ok
+test_invalid_requests (tests.test_integration.HTTPTests.test_invalid_requests) ... ok
+test_private_files_and_traversal_blocked (tests.test_integration.HTTPTests.test_private_files_and_traversal_blocked) ... ok
+test_public_pages_and_health (tests.test_integration.HTTPTests.test_public_pages_and_health) ... ok
+test_three_projects_reconcile (tests.test_integration.IntegrationTests.test_three_projects_reconcile) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 1.706s
+
+OK

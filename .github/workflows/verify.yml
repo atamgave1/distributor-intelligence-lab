@@ -1,0 +1,35 @@
+name: Verify portfolio
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  local-release-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Check runtime versions
+        run: |
+          python3 --version
+          node --version
+      - name: Run correctness, failure recovery and HTTP integration checks
+        run: python3 verify.py
+      - name: Check JavaScript syntax
+        run: |
+          node --check web/assistant.js
+          node --check web/pipeline.js
+          node --check projects/analytics_dashboard/app.js
+      - name: Publish verification summary
+        if: always()
+        run: |
+          if [ -f artifacts/verification.json ]; then
+            cat artifacts/verification.json >> "$GITHUB_STEP_SUMMARY"
+          fi

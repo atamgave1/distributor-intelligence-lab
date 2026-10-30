@@ -1,0 +1,32 @@
+{
+  "generated_at_utc": "2026-10-30T09:04:52Z",
+  "data_provenance": "100% synthetic; shared distributor fixture",
+  "python": "3.13.3",
+  "os": "Darwin",
+  "unit_tests": 18,
+  "unit_tests_passed": true,
+  "shared_source_sha256": "ab1a492364293b52f437323b922b97cdb7cd30ec9b6f86e186c95c40092c5fcd",
+  "mode": "static_snapshot",
+  "source_events": 10709,
+  "net_revenue_cents": 10743773184,
+  "cogs_cents": 7236683040,
+  "net_units": 489924,
+  "annual_net_revenue_cents": {
+    "2024": 5187695503,
+    "2025": 5556077681
+  },
+  "watermarks": {
+    "sales": "2025-12-31T23:59:59Z"
+  },
+  "source_detail_daily_reconcile": true,
+  "rerun_reconciles": true,
+  "full_refresh_elapsed_seconds": 1.4132,
+  "measurement_scope": "Local wall-clock observation; not a throughput or production SLA claim",
+  "not_executed": [
+    "Airbyte",
+    "Airflow",
+    "dbt",
+    "Redshift",
+    "Superset"
+  ]
+}
